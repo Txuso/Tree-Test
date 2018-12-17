@@ -1,0 +1,17 @@
+@import "./colors/themes/_theme-default", "../../environments/theme-config";
+
+@function getMap() {
+	@if $env == "default" {
+		@return $def-colors;
+	} @else {
+		@return $def-colors;
+	}
+}
+
+@function getColor($list...) {
+	$map: getMap();
+	@each $key in $list {
+		$map: map-get($map, $key);
+	}
+	@return $map;
+}
