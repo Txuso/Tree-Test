@@ -159,7 +159,7 @@ var TREE_DATA = JSON.stringify({
                         },
                         Routes: {
                             'SkyVector Map': 'dir',
-                            'Router to Alternates': 'dir',
+                            'Routes to Alternates': 'dir',
                             'Select Route': 'dir',
                             'Save Routes/Custom Stored Routes': 'dir',
                             'ETOPS/ETP': 'dir',
@@ -169,11 +169,11 @@ var TREE_DATA = JSON.stringify({
                             'Military Requirements for Flight Planning': 'dir'
                         },
                         'Filing Flight Plan': {
-                            'Notification Filing': 'dir',
-                            'Flight Plan (PDF)': {
-                                'Notifitacion EDCT/CTOT': 'dir',
-                                'Notifitacion PDC/DCL (PDF)': 'dir'
-                            }
+                            'Notification Filing': {
+                                'Notification EDCT/CTOT': 'dir',
+                                'Notification PDC/DCL (PDF)': 'dir'
+                            },
+                            'Flight Plan (PDF)': 'dir'
                         },
                         Safety: {
                             'FRAT FLight Risk Assessment Tool': 'dir',
@@ -183,7 +183,7 @@ var TREE_DATA = JSON.stringify({
                 },
                 'Edit Trip': 'dir',
                 'Slot Reservation': 'dir',
-                'Runwat Analysis': 'dir',
+                'Runway Analysis': 'dir',
                 'Flight Brief': {
                     'Intelligence Brief': 'dir',
                     'Flight Risk Summary': 'dir',
@@ -211,29 +211,20 @@ var TREE_DATA = JSON.stringify({
         }
     },
     Aircraft: {
-        'Photo Booth Library': {
-            Contents: 'dir',
-            Pictures: 'dir'
+        'Aircraft Profile': {
+            'Messages Datalink': 'dir'
         },
-        Sun: 'png',
-        Woods: 'jpg'
+        'Cabin Services (Billing Usage)': 'png'
     },
     Airports: {
-        'Photo Booth Library': {
-            Contents: 'dir',
-            Pictures: 'dir'
-        },
-        Sun: 'png',
-        Woods: 'jpg'
+        'Airport Details': 'dir',
+        'Slot Reservation': 'dir',
+        'Runway Analysis': 'dir'
     },
     'Document Manager': 'png',
     Directory: {
-        'Photo Booth Library': {
-            Contents: 'dir',
-            Pictures: 'dir'
-        },
-        Sun: 'png',
-        Woods: 'jpg'
+        'Contacts Details/Crede': 'png',
+        Accounts: 'jpg'
     },
     'Messages Datalink': 'png'
 });
@@ -242,7 +233,7 @@ var SECOND_TREE_DATA = JSON.stringify({
         'User Profile': 'png',
         'User Preferences': 'png',
         'Roles/permissions': 'png',
-        'RolesLog Out': 'png'
+        'Log Out': 'png'
     },
     Chat: 'png',
     Feedback: 'png',
