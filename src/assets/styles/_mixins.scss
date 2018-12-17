@@ -1,0 +1,128 @@
+// Em function helper
+$browser-context: 16;
+@function em($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}em;
+}
+
+@mixin position($position: relative, $top: 0, $left: 0, $bottom: null, $right: null) {
+	position: $position;
+	top: $top;
+	right: $right;
+	bottom: $bottom;
+	left: $left;
+}
+
+@mixin user-select($value) {
+	-moz-select: $value;
+	-webkit-user-select: $value;
+	    -ms-user-select: $value;
+	     -o-user-select: $value;
+	        user-select: $value;
+}
+
+@mixin box-shadow($args) {
+	        box-shadow: $args;
+
+	-webkit-box-shadow: $args;
+	   -moz-box-shadow: $args;
+	    -ms-box-shadow: $args;
+	     -o-box-shadow: $args;
+}
+
+@mixin transition($value...) {
+	        transition: $value;
+
+	-webkit-transition: $value;
+	   -moz-transition: $value;
+	    -ms-transition: $value;
+	     -o-transition: $value;
+}
+
+@mixin transform($args) {
+	        transform: $args;
+
+	-webkit-transform: $args;
+	   -moz-transform: $args;
+	    -ms-transform: $args;
+	     -o-transform: $args;
+}
+
+@mixin animation($str) {
+	        animation: #{$str};
+
+	-webkit-animation: #{$str};
+	   -moz-animation: #{$str};
+	    -ms-animation: #{$str};
+	     -o-animation: #{$str};
+}
+
+@mixin keyframes($animation-name) {
+	@-webkit-keyframes #{$animation-name} {
+		@content;
+	}
+	@-moz-keyframes #{$animation-name} {
+		@content;
+	}
+	@-ms-keyframes #{$animation-name} {
+		@content;
+	}
+	@-o-keyframes #{$animation-name} {
+		@content;
+	}
+	@keyframes #{$animation-name} {
+		@content;
+	}
+}
+
+@mixin hover {
+	@media (hover: hover) {
+		&:hover {
+			@content;
+		}
+	}
+}
+
+@mixin placeholder {
+	&::placeholder {
+		/* Chrome, Firefox, Opera, Safari 10.1+ */
+		@content;
+	}
+	&:-ms-input-placeholder {
+		/* Internet Explorer 10-11 */
+		@content;
+	}
+	&::-ms-input-placeholder {
+		/* Microsoft Edge */
+		@content;
+	}
+}
+
+@mixin transform($args) {
+	        transform: $args;
+
+	-webkit-transform: $args;
+	   -moz-transform: $args;
+	    -ms-transform: $args;
+	     -o-transform: $args;
+}
+
+
+@mixin background-image($imgpath1, $imgpath2, $imgpath3, $attachment: scroll, $position: center center, $repeat: no-repeat) {
+    background: {
+      image: url($imgpath1);
+      image: -webkit-image-set(
+        $imgpath1 1x,
+        $imgpath2 2x,
+        $imgpath3 3x
+      );
+      image: image-set(
+        $imgpath1 1x,
+        $imgpath2 2x,
+        $imgpath3 3x
+      );
+      attachment: $attachment;
+      position: $position;
+      repeat: $repeat;
+      size: cover;
+    }
+  }

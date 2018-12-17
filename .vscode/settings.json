@@ -1,0 +1,23 @@
+{
+	"editor.formatOnSave": true,
+	"editor.formatOnPaste": true,
+	"editor.detectIndentation": false,
+	"editor.insertSpaces": false,
+	"editor.tabSize": 3,
+	"prettier.printWidth": 120,
+	"prettier.useTabs": true,
+	"prettier.cssEnable": [],
+	"html.format.enable": false,
+	"recommendations": [
+		"amatiasq.sort-imports",
+		"mrmlnc.vscode-csscomb",
+		"remimarsal.prettier-now",
+		"eg2.tslint",
+		"eamodio.gitlens"
+	],
+	"csscomb.formatOnSave": true,
+	"csscomb.syntaxAssociations": {
+		"postcss": "scss"
+	},
+	"csscomb.preset": "./csscomb.conf.json"
+}
